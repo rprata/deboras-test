@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Patricia's Page</title>
+    <% content_for :title, "Patricia's Page" %>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Admin Area</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="admin.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="statistics.html">Statistics</a>
+                    </li>
+                    <% if current_user %> 
+                        <li><%= link_to "Log out", admin_logout_path, method: "delete" %></li> 
+                    <% end %>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('/assets/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Patricia's Page</h1>
+                        <hr class="small">
+                        <span class="subheading">Statistics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="statistics.html"><font color="000000"><b>English Statistics</b></font></a>
+                <hr/>
+            </div>
+            <div class="col-sm-6">
+                <a href="statistics-br.html"><font color="00000">Portuguese Statistics</font></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div>
+                    <p><b>becomes/becoming:</b></p>
+                    <%= pie_chart Test.group(:answer_5).where("wrong_answers < ? AND answer_5 != ?", 3, "used to become").count %>
+                </div>
+                <div>
+                    <p><b>isn't undestanding/don't understanding:</b></p>
+                    <%= pie_chart Test.group(:answer_6).where("wrong_answers < ? AND answer_6 != ?", 3, "is used to understanding").count %>
+                </div>
+                <div>
+                    <p><b>doesn't exist/isn't existing:</b></p>
+                    <%= pie_chart Test.group(:answer_9).where("wrong_answers < ? AND answer_9 != ?", 3, "not to exist").count %>
+                </div>
+                <div>
+                    <p><b>see/am seeing:</b></p>
+                    <%= pie_chart Test.group(:answer_12).where("wrong_answers < ? AND answer_12 != ?", 3, "will see").count %>
+                </div>
+                <div>
+                    <p><b>lives/is living:</b></p>
+                    <%= pie_chart Test.group(:answer_14).where("wrong_answers < ? AND answer_14 != ?", 3, "would live").count %>
+                </div>
+                <div>
+                    <p><b>don't like/am not liking:</b></p>
+                    <%= pie_chart Test.group(:answer_17).where("wrong_answers < ? AND answer_6 != ?", 3, "would'n like").count %>
+                </div>
+                <div>
+                    <p><b>Progressive Morphology/ Non Progressive Morphology</b></p>
+                    <%= pie_chart @data %>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">Copyright &copy; Bioling 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <%= javascript_include_tag "jquery.js" %>
+    <%= javascript_include_tag "jquery.validate.js" %>
+
+    <!-- Bootstrap Core JavaScript -->
+    <%= javascript_include_tag "bootstrap.min.js" %>
+    
+</body>
+
+</html>

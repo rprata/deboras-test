@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Debora's Page - Text</title>
+    <% content_for :title, "Debora's Page - Text" %>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="clean-blog.min.css" rel="stylesheet">
+
+    <link href="sweetalert.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="text.html">Texto</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('/assets/post-bg-3.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Instrucciones</h1>
+                        <h2 class="subheading" align="justify">Los siguientes textos contienen algunos huecos. Para cada hueco, hay tres opciones de respuesta. Como soy una hablante extranjera, a mí me gustaría saber la opción más natural para un hablante nativo de español. <b>Elige la respuesta que mejor te parezca.</b> La idea no es elegir la respuesta correcta, pero la respuesta que elegirías si contases esas historias.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <%= form_for @test, :html => { :id => "testForm"} do |t| %>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h3>(En el restaurante)</h3>
+                    <p align="justify">
+                    — Tengo hambre. Me gustaría llamar al <%= t.select :answer_1, "<option></option><option>camarero</option><option>garzón</option><option>cocinero</option>".html_safe %> y hacer el pedido, pero aún no decidí que quiero comer.
+                    </p>
+                    <p align="justify">
+                    — Yo tampoco. Mi madre <%= t.select :answer_2, "<option></option><option>llegó</option><option>vino</option><option>volvió</option>".html_safe %> a este restaurante la semana pasada y me dijo que <%= t.select :answer_2, "<option></option><option>comió</option><option>comiese</option><option>se comió</option>".html_safe %> un plato muy <%= t.select :answer_2, "<option></option><option>rico</option><option>valioso</option><option>sabroso</option>".html_safe %>.
+                    </p>
+                    <p align="justify">
+                    — ¿Vas a pedir el mismo plato que tu madre?
+                    </p>
+                    <p align="justify">
+                    — No, porque el plato tiene pollo y soy vegetariana. Pero también me dijo que <%= t.select :answer_2, "<option></option><option>se bebió</option><option>bebiera</option><option>bebió</option>".html_safe %> un vaso de un <%= t.select :answer_2, "<option></option><option>vino</option><option>jugo</option><option>zumo</option>".html_safe %> de una fruta brasileña y me gustaría probarlo.
+                    </p>
+                    <hr>
+                    <h3>(En la panadería hablando de Pablo)</h3>
+                    <p align="justify">
+                    — Mira, Pablo está sentado solo en aquella mesa. ¿Qué está haciendo? ¿<%= t.select :answer_1, "<option></option><option>fumando</option><option>Hubiera fumado</option><option>Está fumando</option>".html_safe %> un puro? No sabía que fumaba.
+                    </p>
+                    <p align="justify">
+                    — Sí. Me dijo que no está acostumbrado a fumar, pero está nervioso <%= t.select :answer_2, "<option></option><option>estos días</option><option>los últimos días</option><option>posteriormente</option>".html_safe %> y el puro lo ayuda a estar más <%= t.select :answer_2, "<option></option><option>calmo</option><option>angustiado</option><option>tranquilo</option>".html_safe %>. Por eso, está <%= t.select :answer_2, "<option></option><option>empezando</option><option>comenzando</option><option>pasando</option>".html_safe %> a fumar.
+                    </p>
+                    <p align="justify">
+                    — ¿Y qué es eso que tiene en la otra mano? ¿<%= t.select :answer_2, "<option></option><option>Está tomando</option><option>Tomara</option><option>Se está tomando</option>".html_safe %> una cerveza a las 10:00 de la mañana? Dile a Pablo que aunque esté en un período <%= t.select :answer_2, "<option></option><option>agradable</option><option>difícil</option><option>complicado</option>".html_safe %>, debe cuidar su salud. No es bueno que empiece a fumar para olvidar los problemas. Después puede viciarse.
+                    </p>
+                    <hr>
+                    <h3>(En la casa)</h3>
+                    <p align="justify">
+                    — Estoy preocupada por tu hermano. Llegó a casa <%= t.select :answer_2, "<option></option><option>satisfecho</option><option>hambriento</option><option>muerto de hambre</option>".html_safe %> y <%= t.select :answer_2, "<option></option><option>tragó</option><option>tragase</option><option>se tragó</option>".html_safe %> dos plátanos mientras yo preparaba la cena. Después, <%= t.select :answer_2, "<option></option><option>se cenó</option><option>hubiera cenado</option><option>cenó</option>".html_safe %> dos platos de pasta y ahora ya está durmiendo.
+                    </p>
+                    <p align="justify">
+                    — Creo que está <%= t.select :answer_2, "<option></option><option>mirando</option><option>escuchando</option><option>viendo</option>".html_safe %> la tele, mamá. José no duerme temprano. Voy a hablar con él y preguntarle si está todo bien. 
+                    </p>
+                    <p align="justify">
+                    (Unos minutos más tarde)
+                    </p>
+                    <p align="justify">
+                    — No te preocupes, mamá. José sólo está muy <%= t.select :answer_2, "<option></option><option>fortalecido</option><option>cansado</option><option>fatigado</option>".html_safe %> porque fue tan intenso su trabajo que no tuvo tiempo de comer. Además, se pasó 2 horas conduciendo porque había un gran <%= t.select :answer_2, "<option></option><option>atasco</option><option>embotellamiento</option><option>partido</option>".html_safe %> en la avenida principal.
+                    </p>
+                    <hr>
+                    <h3>(En la recreación de la escuela)</h3>
+                    <p align="justify">
+                    — <%= t.select :answer_2, "<option></option><option>Maestra</option><option>Instructora</option><option>Profesora</option>".html_safe %>, aquél chico no quiso jugar con los <%= t.select :answer_2, "<option></option><option>iguales</option><option>otros</option><option>demás</option>".html_safe %>. <%= t.select :answer_2, "<option></option><option>Gastó</option><option>Se gastó</option><option>fatigado</option>".html_safe %> todo el lápiz de pintar al dibujar con fuerza algunos dibujos sin sentido y después no quiso comer nada. Yo <%= t.select :answer_2, "<option></option><option>hablé</option><option>conversé</option><option>bailé</option>".html_safe %> con él y <%= t.select :answer_2, "<option></option><option>se merendó</option><option>hubiera merendado</option><option>merendó</option>".html_safe %> la mitad de un bocadillo. 
+                    </p>
+                    <p align="justify">
+                    — Así es Francisco. Él es muy <%= t.select :answer_2, "<option></option><option>tímido</option><option>vergonzoso</option><option>resuelto</option>".html_safe %>. Voy a llamar a su madre y decirle como se comporta su hijo aquí en la escuela.
+                    </p>
+                    <hr>
+                    <h3>(En el teléfono)</h3>
+                    <p align="justify">
+                    — ¿<%= t.select :answer_2, "<option></option><option>Cómo estás</option><option>Diga</option><option>Hola</option>".html_safe %>?
+                    </p>                    
+                    <p align="justify">
+                    — Señora González, soy Fernanda. ¿María puede ponerse al teléfono?
+                    </p>
+                    <p align="justify">
+                    — María está comiendo. <%= t.select :answer_2, "<option></option><option>Se está almorzando</option><option>Almorzara</option><option>Está almorzando</option>".html_safe %> un plato de lasaña que hice hoy. Sé que te gusta la lasaña. ¿Quieres venir aquí y almorzar también?
+                    </p>
+                    <p align="justify">
+                    —  Gracias, Señora González, pero ya almorcé. Por favor, dile a María que <%= t.select :answer_2, "<option></option><option>luego</option><option>en seguida</option><option>ahora</option>".html_safe %> la vuelvo a llamar. Quiero hablar con ella sobre una actividad de clase que estamos <%= t.select :answer_2, "<option></option><option>elaborando</option><option>cursando</option><option>haciendo</option>".html_safe %>.
+                    </p>
+                    <p align="justify">
+                    — Voy a decirle que te llame cuando termine de almorzar. Ahora tengo que dejarte porque ese teléfono se descarga muy <%= t.select :answer_2, "<option></option><option>rápido</option><option>veloz</option><option>pausado</option>".html_safe %>. Parece que algo <%= t.select :answer_2, "<option></option><option>está consumiendo</option><option>consumiese</option><option>se está consumiendo</option>".html_safe %> la batería. Voy a decirle que te llame por el móvil. Un abrazo y ven pronto a hacernos una visita.
+                    </p>
+                    <p align="justify">
+                    — Claro, Señora González. Un abrazo.
+                    </p>
+                    <hr>
+                    <h3>(En la casa por la mañana)</h3>
+                    <p align="justify">
+                    — Creo que tu hermana llegará tarde al <%= t.select :answer_2, "<option></option><option>trabajo</option><option>intervalo</option><option>servicio</option>".html_safe %> hoy.
+                    </p>
+                    <p align="justify">
+                    — ¿Por qué?
+                    </p>
+                    <p align="justify">
+                    — Porque ya son las 8:30 y aún <%= t.select :answer_2, "<option></option><option>está desayunando</option><option>desayunase</option><option>se está desayunando</option>".html_safe %> un pedazo de pan y un vaso de leche. Empieza a trabajar a las 9:00 y parece que <%= t.select :answer_2, "<option></option><option>se está degustando</option><option>hubiera degustado</option><option>está degustando</option>".html_safe %> el pan porque lo está comiendo demasiado <%= t.select :answer_2, "<option></option><option>despacio</option><option>lento</option><option>deprisa</option>".html_safe %>.
+                    </p>
+                    <p align="justify">
+                    — También llegaré tarde a la <%= t.select :answer_2, "<option></option><option>playa</option><option>facultad</option><option>universidad</option>".html_safe %>. Mi clase empieza a las 8:00, pero me acabo de despertar. Estoy muy cansado porque <%= t.select :answer_2, "<option></option><option>estudié</option><option>dormí</option><option>descansé</option>".html_safe %> poco ayer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p><b>Now, If you agree to take part in my research, I just need to know some pieces of information about you:</b></p>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Name</label>
+                            <%= t.text_field :name, :placeholder => "Name", class: "form-control" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Gender</label>
+                            <%= t.text_field :gender, :placeholder => "Gender", class: "form-control" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Age</label>
+                            <%= t.text_field :age, :placeholder => "Age", class: "form-control" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Hometown and Country</label>
+                            <%= t.text_field :hometown, :placeholder => "Hometown and Country", class: "form-control" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Occupation</label>
+                            <%= t.text_field :occupation, :placeholder => "Occupation", class: "form-control" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Education and Major</label>
+                            <%= t.text_field :education, :placeholder => "Education and Major", class: "form-control" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Email Address</label>
+                            <%= t.email_field :email, :placeholder => "Email", class: "form-control" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div> 
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Bilingual</label>
+                            <%= t.text_field :bilingual, :placeholder => "Are you bilingual? If so, what language(s)?", class: "form-control" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Foreign</label>
+                            <%= t.text_field :foreign, :placeholder => "Have you studied a foreign language? If so, what language(s)?", class: "form-control" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <center>
+                                <%= t.submit "Send", class: "btn btn-default btn-lg" %>
+                            </center>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <% end %>
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p class="copyright text-muted">Copyright &copy; Bioling 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <%= javascript_include_tag "sweetalert.min.js" %>
+
+    <%= javascript_include_tag "jquery.js" %>
+    <%= javascript_include_tag "jquery.validate.js" %>
+
+    <!-- Bootstrap Core JavaScript -->
+    <%= javascript_include_tag "bootstrap.min.js" %>
+
+    <script>
+        $(document).ready(function () {
+            $('#testForm').validate({
+                onclick: false,
+                rules: {
+                    'test[name]': {
+                        required: true
+                    },
+                    'test[gender]': {
+                        required: true
+                    },
+                    'test[age]': {
+                        required: true
+                    },
+                    'test[email]': {
+                        required: true,
+                        email: true
+                    },
+                    'test[education]': {
+                        required: true
+                    },
+                    'test[occupation]': {
+                        required: true
+                    },
+                    'test[hometown]': {
+                        required: true
+                    },
+                    'test[bilingual]': {
+                        required: true
+                    },
+                    'test[foreign]': {
+                        required: true
+                    },
+                    'test[answer_1]': {
+                        required: true
+                    },
+                    'test[answer_2]': {
+                        required: true
+                    },
+                    'test[answer_3]': {
+                        required: true
+                    },
+                    'test[answer_4]': {
+                        required: true
+                    },
+                    'test[answer_5]': {
+                        required: true
+                    },
+                    'test[answer_6]': {
+                        required: true
+                    },
+                    'test[answer_7]': {
+                        required: true
+                    },
+                    'test[answer_8]': {
+                        required: true
+                    },
+                    'test[answer_9]': {
+                        required: true
+                    },
+                    'test[answer_10]': {
+                        required: true
+                    },
+                    'test[answer_11]': {
+                        required: true
+                    },
+                    'test[answer_12]': {
+                        required: true
+                    },
+                    'test[answer_13]': {
+                        required: true
+                    },
+                    'test[answer_14]': {
+                        required: true
+                    },
+                    'test[answer_15]': {
+                        required: true
+                    },
+                    'test[answer_16]': {
+                        required: true
+                    },
+                    'test[answer_17]': {
+                        required: true
+                    },
+                    'test[answer_18]': {
+                        required: true
+                    },
+                },
+                errorPlacement: function (error, element) {
+                    swal({   
+                        title: "Error!",   
+                        text: "You didn't fill in all of the blanks. Please, check it.",   
+                        type: "error",   
+                        confirmButtonText: "Ok"
+                    }); 
+                }
+            });
+        });
+    </script>
+
+    <% if flash[:success] %>
+      <script>
+      swal({
+            title: "Success!",   
+            text: "Thank you for your help! The results of my dissertation will available on March 17. If you want me to send it, go to 'contact' section!",   
+            type: "success",   
+            confirmButtonText: "Ok"
+        }); 
+      </script>
+    <% end %>
+
+
+</body>
+
+</html>
