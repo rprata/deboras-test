@@ -29,6 +29,24 @@ class CreateTests < ActiveRecord::Migration
       t.string :answer_16
       t.string :answer_17
       t.string :answer_18
+      t.string :answer_19
+      t.string :answer_20
+      t.string :answer_21
+      t.string :answer_22
+      t.string :answer_23
+      t.string :answer_24
+      t.string :answer_25
+      t.string :answer_26
+      t.string :answer_27
+      t.string :answer_28
+      t.string :answer_29
+      t.string :answer_30
+      t.string :answer_31
+      t.string :answer_32
+      t.string :answer_33
+      t.string :answer_34
+      t.string :answer_35
+      t.string :answer_36
 
       t.integer :wrong_answers
       
