@@ -484,67 +484,46 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p><b>Now, If you agree to take part in my research, I just need to know some pieces of information about you:</b></p>
+                <p><b>Ahora, Si acepta participar en mi investigación, sólo necesito saber algunas piezas de información acerca de usted:</b></p>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Name</label>
-                            <%= t.text_field :name, :placeholder => "Name", class: "form-control" %>
+                            <label>Género</label>
+                            <%= t.text_field :gender, :placeholder => "Género", class: "form-control" %>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Gender</label>
-                            <%= t.text_field :gender, :placeholder => "Gender", class: "form-control" %>
+                            <label>Edad</label>
+                            <%= t.text_field :age, :placeholder => "Edad", class: "form-control" %>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Age</label>
-                            <%= t.text_field :age, :placeholder => "Age", class: "form-control" %>
+                            <label>Ciudad y país de nacimiento</label>
+                            <%= t.text_field :hometown, :placeholder => "Ciudad y país de nacimiento", class: "form-control" %>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Hometown and Country</label>
-                            <%= t.text_field :hometown, :placeholder => "Hometown and Country", class: "form-control" %>
+                            <label>Ocupación</label>
+                            <%= t.text_field :occupation, :placeholder => "Ocupación", class: "form-control" %>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Occupation</label>
-                            <%= t.text_field :occupation, :placeholder => "Occupation", class: "form-control" %>
+                            <label>Nivel de educación</label>
+                            <%= t.text_field :education, :placeholder => "Nivel de educación", class: "form-control" %>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Education and Major</label>
-                            <%= t.text_field :education, :placeholder => "Education and Major", class: "form-control" %>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Email Address</label>
-                            <%= t.email_field :email, :placeholder => "Email", class: "form-control" %>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div> 
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Bilingual</label>
-                            <%= t.text_field :bilingual, :placeholder => "Are you bilingual? If so, what language(s)?", class: "form-control" %>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Foreign</label>
-                            <%= t.text_field :foreign, :placeholder => "Have you studied a foreign language? If so, what language(s)?", class: "form-control" %>
+                            <label>Si estás/estuviste en la universidad, ¿qué carrera estudias/ estudiaste?</label>
+                            <%= t.text_field :foreign, :placeholder => "Si estás/estuviste en la universidad, ¿qué carrera estudias/ estudiaste?", class: "form-control" %>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -666,14 +645,65 @@
                     'test[answer_17]': {
                         required: true
                     },
-                    'test[answer_18]': {
+                    'test[answer_19]': {
+                        required: true
+                    },
+                    'test[answer_20]': {
+                        required: true
+                    },
+                    'test[answer_21]': {
+                        required: true
+                    },
+                    'test[answer_22]': {
+                        required: true
+                    },
+                    'test[answer_23]': {
+                        required: true
+                    },
+                    'test[answer_24]': {
+                        required: true
+                    },
+                    'test[answer_25]': {
+                        required: true
+                    },
+                    'test[answer_26]': {
+                        required: true
+                    },
+                    'test[answer_27]': {
+                        required: true
+                    },
+                    'test[answer_28]': {
+                        required: true
+                    },
+                    'test[answer_29]': {
+                        required: true
+                    },
+                    'test[answer_30]': {
+                        required: true
+                    },
+                    'test[answer_31]': {
+                        required: true
+                    },
+                    'test[answer_32]': {
+                        required: true
+                    },
+                    'test[answer_33]': {
+                        required: true
+                    },
+                    'test[answer_34]': {
+                        required: true
+                    },
+                    'test[answer_35]': {
+                        required: true
+                    },
+                    'test[answer_36]': {
                         required: true
                     },
                 },
                 errorPlacement: function (error, element) {
                     swal({   
                         title: "Error!",   
-                        text: "You didn't fill in all of the blanks. Please, check it.",   
+                        text: "No ha de rellenar todos los espacios en blanco. Compruébelo por favor.",   
                         type: "error",   
                         confirmButtonText: "Ok"
                     }); 
@@ -685,8 +715,8 @@
     <% if flash[:success] %>
       <script>
       swal({
-            title: "Success!",   
-            text: "Thank you for your help! The results of my dissertation will available on March 17. If you want me to send it, go to 'contact' section!",   
+            title: "Éxito!",   
+            text: "¡Gracias por tu ayuda! Los resultados de mi tesis quieren disponible el 17 de marzo Si quieren que le envíe, vaya a la sección 'contacto'!",   
             type: "success",   
             confirmButtonText: "Ok"
         }); 

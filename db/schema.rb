@@ -22,14 +22,11 @@ ActiveRecord::Schema.define(version: 20160717133535) do
   end
 
   create_table "tests", force: true do |t|
-    t.string   "name"
     t.string   "gender"
     t.string   "age"
     t.string   "hometown"
     t.string   "occupation"
     t.string   "education"
-    t.string   "email"
-    t.string   "bilingual"
     t.string   "foreign"
     t.string   "answer_1"
     t.string   "answer_2"

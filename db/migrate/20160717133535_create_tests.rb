@@ -1,14 +1,11 @@
 class CreateTests < ActiveRecord::Migration
   def change
     create_table :tests do |t|
-      t.string :name
       t.string :gender
       t.string :age
       t.string :hometown
       t.string :occupation
       t.string :education
-      t.string :email
-      t.string :bilingual
       t.string :foreign
 
       t.string :answer_1
