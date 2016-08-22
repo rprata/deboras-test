@@ -75,9 +75,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
-                        <h1>Contact Me</h1>
+                        <h1>Contacto</h1>
                         <hr class="small">
-                        <span class="subheading">Questions?</span>
+                        <span class="subheading">¿Preguntas?</span>
                     </div>
                 </div>
             </div>
@@ -88,9 +88,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p align="justify">My dissertation will be availabe on March 1, 2017. As you took part in my experiment, I can send you the results of the research by the time the dissertation is finished. If you want me to send it, you can send me an e-mail asking for it.
-                <br/>                    
-                Besides, in case you have questions, you can also send me an e-mail.
+                <p align="justify">¡Muchas gracias por hacer las actividades! Contribuiste mucho al trabajo que hago en el Máster. Mi trabajo terminará en marzo de 2017. Si deseas saber un poco más sobre ese trabajo, escribe tu correo electrónico abajo o envíame un correo. 
                 </p>
                 <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
                 <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
@@ -99,21 +97,21 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Name</label>
-                            <%= t.text_field :name, :placeholder => "Name", class: "form-control" %>
+                            <%= t.text_field :name, :placeholder => "Nombre", class: "form-control" %>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Email Address</label>
-                            <%= t.email_field :email, :placeholder => "Email Address", class: "form-control" %>
+                            <label>Email</label>
+                            <%= t.email_field :email, :placeholder => "Email", class: "form-control" %>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Message</label>
-                            <%= t.text_area :message, :rows => "5", :placeholder => "Write your message here", class: "form-control" %>
+                            <label>Mensaje</label>
+                            <%= t.text_area :message, :rows => "5", :placeholder => "Mensaje", class: "form-control" %>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -122,7 +120,7 @@
                     <div class="row">
                         <div class="form-group col-xs-12">
                             <center>
-                                <%= t.submit "Send", class: "btn btn-default btn-lg" %>
+                                <%= t.submit "Enviar", class: "btn btn-default btn-lg" %>
                             </center>
                         </div>
                     </div>
@@ -172,7 +170,7 @@
             errorPlacement: function (error, element) {
                 swal({   
                     title: "Error!",   
-                    text: "You didn't fill in all of the blanks. Please, check it.",   
+                    text: "No ha de rellenar todos los espacios en blanco. Compruébelo por favor.",   
                     type: "error",   
                     confirmButtonText: "Ok"
                 }); 
@@ -187,7 +185,7 @@
       <script>
       swal({
             title: "Success!",   
-            text: "Thank you for your message! Soon I'll answer you!",   
+            text: "¡Gracias por tu mensaje! Pronto os responderé!",   
             type: "success",   
             confirmButtonText: "Ok"
         }); 

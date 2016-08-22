@@ -56,9 +56,6 @@
                     <li>
                         <a href="admin.html">Home</a>
                     </li>
-                    <li>
-                        <a href="statistics.html">Statistics</a>
-                    </li>
                     <% if current_user %> 
                         <li><%= link_to "Log out", admin_logout_path, method: "delete" %></li> 
                     <% end %>
@@ -87,17 +84,6 @@
 
     <!-- Main Content -->
     <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <a href="admin.html"><font color="000000"><b>English Results</b></font></a>
-                <hr/>
-            </div>
-            <div class="col-sm-6">
-                <a href="admin-br.html"><font color="00000">Portuguese Results</font></a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
         <!-- Adicionar lista dos testes realizados -->
         <div class="table-responsive">          
             <table class="table">
@@ -110,9 +96,6 @@
                                 Created At
                             </td>
                             <td>
-                                Answers
-                            </td>
-                            <td>
                                 
                             </td>
                         </tr>
@@ -120,13 +103,8 @@
                     <tbody>
                         <% @test_results.each do |test_result| %> 
                         <tr>
-                            <td><%= link_to test_result.name, test_path(test_result)%> </td>
+                            <td><%= link_to test_result.id, test_path(test_result)%> </td>
                             <td><%= test_result.created_at %></td>
-                            <%  if test_result.wrong_answers >= 3 %>
-                                <td><font color="CC0000"><%= test_result.wrong_answers %>/18<font></td>
-                            <% else %>
-                                <td><font color="0000CC"><%= test_result.wrong_answers %>/18<font></td>
-                            <% end %>
                             <td><%= link_to "Delete", test_result, :method => :delete, data: {
                                   confirm: 'Take easy, man!',
                                   :'confirm-button-text' => 'Yes, of course',

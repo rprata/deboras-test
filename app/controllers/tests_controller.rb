@@ -106,7 +106,7 @@ class TestsController < ApplicationController
 
 	def create 
 	    @test = Test.new(test_params)
-	    @test.wrong_answers = get_total_wrong_answers(@test)
+	    @test.wrong_answers = 0
 	    if @test.save
 	      flash[:success] = "works!"
 	      redirect_to '/text'
@@ -122,7 +122,6 @@ class TestsController < ApplicationController
 
 	def show 
 		@test_result = Test.find(params[:id]) 
-		@data = get_morfo_data(@test_result)
 	end
 
 	def destroy
@@ -137,14 +136,11 @@ class TestsController < ApplicationController
 
 	private
 	def test_params 
-		params.require(:test).permit(:name,
-									 :gender,
+		params.require(:test).permit(:gender,
 									 :age,
 									 :hometown,
 									 :education,
 									 :occupation,
-									 :email,
-									 :bilingual,
 									 :foreign,
 									 :answer_1,
 									 :answer_2,
