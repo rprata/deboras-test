@@ -106,7 +106,7 @@
                     <hr>
                     <h3>(En la panadería hablando de Pablo)</h3>
                     <p align="justify">
-                    — Mira, Pablo está sentado solo en aquella mesa. ¿Qué está haciendo? ¿<%= t.select :answer_7, "<option></option><option>fumando</option><option>Hubiera fumado</option><option>Está fumando</option>".html_safe %> un puro? No sabía que fumaba.
+                    — Mira, Pablo está sentado solo en aquella mesa. ¿Qué está haciendo? ¿<%= t.select :answer_7, "<option></option><option>Se está fumando</option><option>Hubiera fumado</option><option>Está fumando</option>".html_safe %> un puro? No sabía que fumaba.
                     </p>
                     <p align="justify">
                     — Sí. Me dijo que no está acostumbrado a fumar, pero está nervioso <%= t.select :answer_8, "<option></option><option>estos días</option><option>los últimos días</option><option>posteriormente</option>".html_safe %> y el puro lo ayuda a estar más <%= t.select :answer_9, "<option></option><option>calmo</option><option>angustiado</option><option>tranquilo</option>".html_safe %>. Por eso, está <%= t.select :answer_10, "<option></option><option>empezando</option><option>comenzando</option><option>pasando</option>".html_safe %> a fumar.
@@ -131,7 +131,7 @@
                     <hr>
                     <h3>(En la recreación de la escuela)</h3>
                     <p align="justify">
-                    — <%= t.select :answer_19, "<option></option><option>Maestra</option><option>Instructora</option><option>Profesora</option>".html_safe %>, aquél chico no quiso jugar con los <%= t.select :answer_20, "<option></option><option>iguales</option><option>otros</option><option>demás</option>".html_safe %>. <%= t.select :answer_21, "<option></option><option>Gastó</option><option>Se gastó</option><option>fatigado</option>".html_safe %> todo el lápiz de pintar al dibujar con fuerza algunos dibujos sin sentido y después no quiso comer nada. Yo <%= t.select :answer_22, "<option></option><option>hablé</option><option>conversé</option><option>bailé</option>".html_safe %> con él y <%= t.select :answer_23, "<option></option><option>se merendó</option><option>hubiera merendado</option><option>merendó</option>".html_safe %> la mitad de un bocadillo. 
+                    — <%= t.select :answer_19, "<option></option><option>Maestra</option><option>Instructora</option><option>Profesora</option>".html_safe %>, aquél chico no quiso jugar con los <%= t.select :answer_20, "<option></option><option>iguales</option><option>otros</option><option>demás</option>".html_safe %>. <%= t.select :answer_21, "<option></option><option>gastó</option><option>se gastó</option><option>gastara</option>".html_safe %> todo el lápiz de pintar al dibujar con fuerza algunos dibujos sin sentido y después no quiso comer nada. Yo <%= t.select :answer_22, "<option></option><option>hablé</option><option>conversé</option><option>bailé</option>".html_safe %> con él y <%= t.select :answer_23, "<option></option><option>se merendó</option><option>hubiera merendado</option><option>merendó</option>".html_safe %> la mitad de un bocadillo. 
                     </p>
                     <p align="justify">
                     — Así es Francisco. Él es muy <%= t.select :answer_24, "<option></option><option>tímido</option><option>vergonzoso</option><option>resuelto</option>".html_safe %>. Voy a llamar a su madre y decirle como se comporta su hijo aquí en la escuela.
@@ -484,7 +484,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p><b>Ahora, Si acepta participar en mi investigación, sólo necesito saber algunas piezas de información acerca de usted:</b></p>
+                <p><b>Ahora, si aceptas participar de mi trabajo, necesito de algunos datos tuyos. Los datos serán utilizados solamente con fines de organización y no serán divulgados.</b></p>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Género</label>
@@ -693,7 +693,7 @@
                 errorPlacement: function (error, element) {
                     swal({   
                         title: "Error!",   
-                        text: "No ha de rellenar todos los espacios en blanco. Compruébelo por favor.",   
+                        text: "Hay huecos no rellenados. Por favor, rellena todos los huecos antes de enviar.",   
                         type: "error",   
                         confirmButtonText: "Ok"
                     }); 
@@ -706,7 +706,7 @@
       <script>
       swal({
             title: "Éxito!",   
-            text: "¡Gracias por tu ayuda! Los resultados de mi tesis quieren disponible el 17 de marzo Si quieren que le envíe, vaya a la sección 'contacto'!",   
+            text: "¡Muchas gracias por tu ayuda! Los resultados de mi trabajo estarán disponibles en marzo de 2017. Si deseas saber un poco más sobre ese trabajo, ve a la sección 'contacto'.",   
             type: "success",   
             confirmButtonText: "Ok"
         }); 
