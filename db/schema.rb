@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160717133535) do
     t.string   "occupation"
     t.string   "education"
     t.string   "foreign"
+    t.string   "biligual"
     t.string   "answer_1"
     t.string   "answer_2"
     t.string   "answer_3"

@@ -7,6 +7,7 @@ class CreateTests < ActiveRecord::Migration
       t.string :occupation
       t.string :education
       t.string :foreign
+      t.string :biligual
 
       t.string :answer_1
       t.string :answer_2

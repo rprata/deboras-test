@@ -131,7 +131,7 @@
                     <hr>
                     <h3>(En la recreación de la escuela)</h3>
                     <p align="justify">
-                    — <%= t.select :answer_19, "<option></option><option>Maestra</option><option>Instructora</option><option>Profesora</option>".html_safe %>, aquél chico no quiso jugar con los <%= t.select :answer_20, "<option></option><option>iguales</option><option>otros</option><option>demás</option>".html_safe %>. <%= t.select :answer_21, "<option></option><option>gastó</option><option>se gastó</option><option>gastara</option>".html_safe %> todo el lápiz de pintar al dibujar con fuerza algunos dibujos sin sentido y después no quiso comer nada. Yo <%= t.select :answer_22, "<option></option><option>hablé</option><option>conversé</option><option>bailé</option>".html_safe %> con él y <%= t.select :answer_23, "<option></option><option>se merendó</option><option>hubiera merendado</option><option>merendó</option>".html_safe %> la mitad de un bocadillo. 
+                    — <%= t.select :answer_19, "<option></option><option>Maestra</option><option>Instructora</option><option>Profesora</option>".html_safe %>, aquél chico no quiso jugar con los <%= t.select :answer_20, "<option></option><option>iguales</option><option>otros</option><option>demás</option>".html_safe %>. <%= t.select :answer_21, "<option></option><option>Gastó</option><option>Se gastó</option><option>Gastara</option>".html_safe %> todo el lápiz de pintar al dibujar con fuerza algunos dibujos sin sentido y después no quiso comer nada. Yo <%= t.select :answer_22, "<option></option><option>hablé</option><option>conversé</option><option>bailé</option>".html_safe %> con él y <%= t.select :answer_23, "<option></option><option>se merendó</option><option>hubiera merendado</option><option>merendó</option>".html_safe %> la mitad de un bocadillo. 
                     </p>
                     <p align="justify">
                     — Así es Francisco. Él es muy <%= t.select :answer_24, "<option></option><option>tímido</option><option>vergonzoso</option><option>resuelto</option>".html_safe %>. Voy a llamar a su madre y decirle como se comporta su hijo aquí en la escuela.
@@ -182,7 +182,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <h3>Parte II</h3>
-                    <p align="justify"> Como soy una hablante extranjera, a mí me gustaría saber si las frases abajo te parecen naturales o no. Si una frase te parece natural, elige la opción "natural". Si una frase no te parece natural, elige la opción "extraña" y después cámbiala (reescribiéndola y haciendo los cambios que consideres necesarios). La idea no es juzgar una frase como cierta o errada, pero juzgar si la frase te suena bien o no.
+                    <p align="justify">Como soy una hablante extranjera, a mí me gustaría saber si las frases abajo te parecen naturales o no. Si una frase te parece natural, escribe "ok" en el espacio blanco debajo de la frase. Si una frase no te parece natural, cámbiala y haz los cambios que consideres necesarios (reescribiéndola en el espacio blanco debajo de la frase). La idea no es juzgar una frase como cierta o errada, pero juzgar si la frase te suena bien o no.
                     </p> 
                     <p> 1. El cantante cantó canciones brasileñas.
                         <br>
@@ -501,8 +501,8 @@
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Ciudad y país de nacimiento</label>
-                            <%= t.text_field :hometown, :placeholder => "Ciudad y país de nacimiento", class: "form-control" %>
+                            <label>Ciudad de Nacimiento</label>
+                            <%= t.text_field :hometown, :placeholder => "Ciudad de Nacimiento", class: "form-control" %>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -524,6 +524,13 @@
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Si estás/estuviste en la universidad, ¿qué carrera estudias/ estudiaste?</label>
                             <%= t.text_field :foreign, :placeholder => "Si estás/estuviste en la universidad, ¿qué carrera estudias/ estudiaste?", class: "form-control" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>¿Es hablante nativo de otra lengua? ¿Cuál?</label>
+                            <%= t.text_field :biligual, :placeholder => "¿Es hablante nativo de otra lengua? ¿Cuál?", class: "form-control" %>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -582,6 +589,9 @@
                         required: true
                     },
                     'test[foreign]': {
+                        required: true
+                    },
+                    'test[biligual]': {
                         required: true
                     },
                     'test[answer_1]': {
@@ -689,6 +699,222 @@
                     'test[answer_36]': {
                         required: true
                     },
+                    'test[radio_1]': {
+                        required: true
+                    },
+                    'test[radio_2]': {
+                        required: true
+                    },
+                    'test[radio_3]': {
+                        required: true
+                    },
+                    'test[radio_4]': {
+                        required: true
+                    },
+                    'test[radio_5]': {
+                        required: true
+                    },
+                    'test[radio_6]': {
+                        required: true
+                    },
+                    'test[radio_7]': {
+                        required: true
+                    },
+                    'test[radio_8]': {
+                        required: true
+                    },
+                    'test[radio_9]': {
+                        required: true
+                    },
+                    'test[radio_10]': {
+                        required: true
+                    },
+                    'test[radio_11]': {
+                        required: true
+                    },
+                    'test[radio_12]': {
+                        required: true
+                    },
+                    'test[radio_13]': {
+                        required: true
+                    },
+                    'test[radio_14]': {
+                        required: true
+                    },
+                    'test[radio_15]': {
+                        required: true
+                    },
+                    'test[radio_16]': {
+                        required: true
+                    },
+                    'test[radio_17]': {
+                        required: true
+                    },
+                    'test[radio_18]': {
+                        required: true
+                    },
+                    'test[radio_19]': {
+                        required: true
+                    },
+                    'test[radio_20]': {
+                        required: true
+                    },
+                    'test[radio_21]': {
+                        required: true
+                    },
+                    'test[radio_22]': {
+                        required: true
+                    },
+                    'test[radio_23]': {
+                        required: true
+                    },
+                    'test[radio_24]': {
+                        required: true
+                    },
+                    'test[radio_25]': {
+                        required: true
+                    },
+                    'test[radio_26]': {
+                        required: true
+                    },
+                    'test[radio_27]': {
+                        required: true
+                    },
+                    'test[radio_28]': {
+                        required: true
+                    },
+                    'test[radio_29]': {
+                        required: true
+                    },
+                    'test[radio_30]': {
+                        required: true
+                    },
+                    'test[radio_31]': {
+                        required: true
+                    },
+                    'test[radio_32]': {
+                        required: true
+                    },
+                    'test[radio_33]': {
+                        required: true
+                    },
+                    'test[radio_34]': {
+                        required: true
+                    },
+                    'test[radio_35]': {
+                        required: true
+                    },
+                    'test[radio_36]': {
+                        required: true
+                    },
+                    'test[correction_1]': {
+                        required: true
+                    },
+                    'test[correction_2]': {
+                        required: true
+                    },
+                    'test[correction_3]': {
+                        required: true
+                    },
+                    'test[correction_4]': {
+                        required: true
+                    },
+                    'test[correction_5]': {
+                        required: true
+                    },
+                    'test[correction_6]': {
+                        required: true
+                    },
+                    'test[correction_7]': {
+                        required: true
+                    },
+                    'test[correction_8]': {
+                        required: true
+                    },
+                    'test[correction_9]': {
+                        required: true
+                    },
+                    'test[correction_10]': {
+                        required: true
+                    },
+                    'test[correction_11]': {
+                        required: true
+                    },
+                    'test[correction_12]': {
+                        required: true
+                    },
+                    'test[correction_13]': {
+                        required: true
+                    },
+                    'test[correction_14]': {
+                        required: true
+                    },
+                    'test[correction_15]': {
+                        required: true
+                    },
+                    'test[correction_16]': {
+                        required: true
+                    },
+                    'test[correction_17]': {
+                        required: true
+                    },
+                    'test[correction_18]': {
+                        required: true
+                    },
+                    'test[correction_19]': {
+                        required: true
+                    },
+                    'test[correction_20]': {
+                        required: true
+                    },
+                    'test[correction_21]': {
+                        required: true
+                    },
+                    'test[correction_22]': {
+                        required: true
+                    },
+                    'test[correction_23]': {
+                        required: true
+                    },
+                    'test[correction_24]': {
+                        required: true
+                    },
+                    'test[correction_25]': {
+                        required: true
+                    },
+                    'test[correction_26]': {
+                        required: true
+                    },
+                    'test[correction_27]': {
+                        required: true
+                    },
+                    'test[correction_28]': {
+                        required: true
+                    },
+                    'test[correction_29]': {
+                        required: true
+                    },
+                    'test[correction_30]': {
+                        required: true
+                    },
+                    'test[correction_31]': {
+                        required: true
+                    },
+                    'test[correction_32]': {
+                        required: true
+                    },
+                    'test[correction_33]': {
+                        required: true
+                    },
+                    'test[correction_34]': {
+                        required: true
+                    },
+                    'test[correction_35]': {
+                        required: true
+                    },
+                    'test[correction_36]': {
+                        required: true
+                    },
                 },
                 errorPlacement: function (error, element) {
                     swal({   
@@ -712,6 +938,10 @@
         }); 
       </script>
     <% end %>
+
+    <script type="text/javascript">
+
+    </script>
 
 
 </body>
