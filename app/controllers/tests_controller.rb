@@ -142,6 +142,7 @@ class TestsController < ApplicationController
 									 :education,
 									 :occupation,
 									 :foreign,
+									 :biligual,
 									 :answer_1,
 									 :answer_2,
 									 :answer_3,
